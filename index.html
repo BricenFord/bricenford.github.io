@@ -1,37 +1,113 @@
 <!--
-This is my personal website to display my resume, portfolio, and anything I deem
-would be appropriate to display
+This is my personal website.
 
 author: Bricen Ford
 -->
 
-<!--
-This file (index.html) is the homepage for my personal website
--->
-
 <!DOCTYPE html>
-
-<html>
-    <head>
-        <title>Bricen Ford's Website</title>
-        <style>
-            .pageTitle {
-                font-family: 'Times New Roman', Times, serif;
-                font-size: 30px;
-                font-weight: bold;
-            }
-        </style>
-
-        <p class="pageTitle">
-            Bricen Ford
-        </p>
-
-        <p>
-            I am a Software Engineer and Computer Science student.
-        </p>
-
-    </head>
-    <body>
-        <a href="projects.html">View projects</a>
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bricen Ford | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            overflow: hidden;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 60px;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+        .nav a:hover {
+            color: #1e88e5;
+        }
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            animation: fadeIn 1.5s ease-in-out forwards;
+            width: 80%;
+            max-width: 800px;
+        }
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 1.5s ease-in-out forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .social-links {
+            margin-top: 15px;
+        }
+        .social-links a {
+            color: #1e88e5;
+            margin: 0 10px;
+            font-size: 20px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .social-links a:hover {
+            color: #1565c0;
+        }
+    </style>
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('.container').forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <div class="header">
+        <h2>Ford</h2>
+        <nav class="nav">
+            <a href="#" onclick="showSection('home')">Home</a>
+            <a href="#" onclick="showSection('about')">About</a>
+            <a href="#" onclick="showSection('projects')">Projects</a>
+            <a href="#" onclick="showSection('contact')">Contact</a>
+        </nav>
+    </div>
+    <div class="container" id="home">
+        <h1 class="fade-in">.</h1>
+        <div class="social-links fade-in">
+            <a href="https://www.linkedin.com/in/your-profile" target="_blank">LinkedIn</a>
+            <a href="https://github.com/your-profile" target="_blank">GitHub</a>
+        </div>
+    </div>
+    <div id="about" class="container fade-in" style="display: none;">
+        <h2>About Me</h2>
+        <p>.</p>
+    </div>
+    <div id="projects" class="container fade-in" style="display: none;">
+        <h2>Projects</h2>
+        <p>Project 1: .</p>
+    </div>
+    <div id="contact" class="container fade-in" style="display: none;">
+        <h2>Contact</h2>
+        <p>Email: .</p>
+    </div>
+</body>
 </html>
