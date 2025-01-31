@@ -1,5 +1,5 @@
 <!--
-This is my personal website.
+This is my personal website for displaying information about me, my projects, and a way to get into contact with me.
 
 author: Bricen Ford
 -->
@@ -11,103 +11,70 @@ author: Bricen Ford
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bricen Ford | Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            background-color: #121212;
-            color: #ffffff;
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 0;
-            overflow: hidden;
-        }
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 60px;
-            position: absolute;
-            top: 0;
-            width: 100%;
-        }
-        .nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 20px;
-            font-size: 18px;
-            transition: color 0.3s;
-        }
-        .nav a:hover {
-            color: #1e88e5;
-        }
-        .container {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            opacity: 0;
-            animation: fadeIn 1.5s ease-in-out forwards;
-            width: 80%;
-            max-width: 800px;
-        }
-        .fade-in {
-            opacity: 0;
-            animation: fadeIn 1.5s ease-in-out forwards;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .social-links {
-            margin-top: 15px;
-        }
-        .social-links a {
-            color: #1e88e5;
-            margin: 0 10px;
-            font-size: 20px;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        .social-links a:hover {
-            color: #1565c0;
-        }
-    </style>
-    <script>
-        function showSection(sectionId) {
-            document.querySelectorAll('.container').forEach(section => {
-                section.style.display = 'none';
-            });
-            document.getElementById(sectionId).style.display = 'block';
-        }
-    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <div class="header">
-        <h2>Ford</h2>
+        <h2>Bricen Ford</h2>
         <nav class="nav">
-            <a href="#" onclick="showSection('home')">Home</a>
-            <a href="#" onclick="showSection('about')">About</a>
-            <a href="#" onclick="showSection('projects')">Projects</a>
-            <a href="#" onclick="showSection('contact')">Contact</a>
+            <a href="#home" onclick="showSection('home')">Home</a>
+            <a href="#about" onclick="showSection('about')">About</a>
+            <a href="#projects" onclick="showSection('projects')">Projects</a>
+            <a href="#contact" onclick="showSection('contact')">Contact</a>
         </nav>
     </div>
-    <div class="container" id="home">
-        <h1 class="fade-in">.</h1>
-        <div class="social-links fade-in">
-            <a href="https://www.linkedin.com/in/your-profile" target="_blank">LinkedIn</a>
-            <a href="https://github.com/your-profile" target="_blank">GitHub</a>
+
+    <div class="container active" id="home">
+        <h1>Welcome to My Portfolio</h1>
+        <p>I am a passionate developer working to improve the world for everyone.</p>
+        <div class="social-links">
+            <a href="https://github.com/bricenford" target="_blank">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/bricenford" target="_blank">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
         </div>
     </div>
-    <div id="about" class="container fade-in" style="display: none;">
+
+    <div id="about" class="container">
         <h2>About Me</h2>
-        <p>.</p>
+        <p></p>
     </div>
-    <div id="projects" class="container fade-in" style="display: none;">
+
+    <div id="projects" class="container">
         <h2>Projects</h2>
-        <p>Project 1: .</p>
+
+        <div class="project-item">
+            <h3 class="project-title">Weather Application | C++</h3>
+            <ul class="project-features">
+                <li>Uses NWS APIs for real-time weather data</li>
+                <li>Interactive console input for location selection</li>
+                <li>Detailed weather forecasts and conditions</li>
+            </ul>
+            <a href="https://github.com/bricenford/weatherapp" target="_blank" class="project-link">
+                <i class="fab fa-github"></i> View on GitHub
+            </a>
+        </div>
+
+        <div class="project-item">
+            <h3 class="project-title">Portfolio Website | HTML/CSS/JS</h3>
+            <ul class="project-features">
+                <li>Custom animations for smooth transitions and interactions</li>
+                <li>Dynamic content switching without page reloads</li>
+                <li>Sections for About, Projects, and Contact with easy navigation</li>
+            </ul>
+            <a href="https://github.com/" target="_blank" class="project-link">
+                <i class="fab fa-github"></i> View on GitHub
+            </a>
+        </div>
     </div>
-    <div id="contact" class="container fade-in" style="display: none;">
+
+    <div id="contact" class="container">
         <h2>Contact</h2>
-        <p>Email: .</p>
+        <p>Email: bricencodes@gmail.com</p>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

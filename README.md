@@ -1,1 +1,1 @@
-This is my personal website.
+This is my personal website for displaying information about me, my projects, and a way to get into contact with me.
