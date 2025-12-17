@@ -46,75 +46,112 @@ author: Bricen Ford
         </p>
     </div>
 
-    <div id="projects" class="container">
-        <h2>Projects</h2>
+<div id="projects" class="container">
+    <h2>Projects</h2>
 
-        <div class="project-item">
-            <h3 class="project-title">Private Cloud Environment | Docker + OpenStack</h3>
-            <ul class="project-features">
-                <li>Orchestrates VMs and networks with OpenStack</li>
-                <li>Runs all services containerized in a Docker environment</li>
-                <li>Provides secure remote access with Tailscale + Headscale</li>
-                <li>Routes multi-service traffic with Nginx reverse proxy and TLS</li>
-                <li>WebUI for LLM deployment and experimentation</li>
-                <li>SearXNG for private, self-hosted metasearch</li>
-            </ul>
-            <a href="https://github.com/bricenford" target="_blank" class="project-link">
-                <i class="fab fa-github"></i> Under Construction
-            </a>
-        </div>
-
-
-        <div class="project-item">
-            <h3 class="project-title">Weather Application | C++</h3>
-            <ul class="project-features">
-                <li>Uses NWS APIs for real-time weather data</li>
-                <li>Interactive console input for location selection</li>
-                <li>Detailed weather forecasts and conditions</li>
-            </ul>
-            <a href="https://github.com/bricenford" target="_blank" class="project-link">
-                <i class="fab fa-github"></i> Under Construction
-            </a>
-        </div>
-
-        <div class="project-item">
-            <h3 class="project-title">Data Structures Projects | C++</h3>
-            <ul class="project-features">
-                <li>Project 1: Implemented a Sparse Matrix Operations Tool with efficient storage and arithmetic operations</li>
-                <li>Project 2: Created a chip simulation program with dynamic allocation and object management</li>
-                <li>Project 3: Designed a queue structure to manage job execution with sorting based on priority, memory, and CPU time</li>
-                <li>Project 4: Developed a multiway tree structure to manage hierarchical data efficiently</li>
-                <li>Project 5: Built a custom linked list-based data structure for dynamic memory management</li>
-            </ul>
-            <a href="https://github.com/BricenFord/CS-2413" target="_blank" class="project-link">
-                <i class="fab fa-github"></i> View on GitHub
-            </a>
-        </div>
-
-        <div class="project-item">
-            <h3 class="project-title">Student Grade Parser | Python</h3>
-            <ul class="project-features">
-                <li>Parses disorganized student data from a plain text file</li>
-                <li>Ranks students by score and participation level</li>
-                <li>Assigns letter grades and generates an HTML table</li>
-                <li>Sorted by last name, then first name and ID for clarity</li>
-            </ul>
-            <a href="https://github.com/BricenFord/student-grade-parser" target="_blank" class="project-link">
-                <i class="fab fa-github"></i> View on GitHub
-            </a>
-        </div>
-
-        <div class="project-item">
-            <h3 class="project-title">Portfolio Website | HTML/CSS/JS</h3>
-            <ul class="project-features">
-                <li>Dynamic content switching without page reloads</li>
-                <li>Custom animations for smooth transitions and interactions</li>
-            </ul>
-            <a href="https://github.com/BricenFord/bricenford.github.io" target="_blank" class="project-link">
-                <i class="fab fa-github"></i> View on GitHub
-            </a>
-        </div>
+    <div class="project-item">
+        <h3 class="project-title">
+            Infrastructure-as-Code Kubernetes Platform | Pulumi, Kubernetes, Go
+        </h3>
+        <ul class="project-features">
+            <li>Provisioned and managed a multi-node Kubernetes cluster using Pulumi with Go</li>
+            <li>Deployed a highly available control plane and worker nodes on TalosOS</li>
+            <li>Re-architected the <strong>Distributed Cloud Platform</strong> to use Kubernetes-native deployments, services, and ingress</li>
+            <li>Designed for high availability and fault tolerance with redundant components</li>
+            <li>Migrated services into Kubernetes deployments, services, and ingress resources</li>
+            <li>Implemented automated lifecycle management, scaling, and reproducible environments</li>
+            <li>Integrated scheduling, service discovery, and health checks</li>
+        </ul>
+        <a href="https://github.com/bricenford" target="_blank" class="project-link">
+            <i class="fab fa-github"></i> Under Construction
+        </a>
     </div>
+
+    <div class="project-item">
+        <h3 class="project-title">
+            Distributed Cloud Platform | OpenStack, Docker, Nginx
+        </h3>
+        <ul class="project-features">
+            <li>Designed and deployed a distributed private cloud across multiple compute nodes</li>
+            <li>Managed virtual machines, networking, security groups, and storage with OpenStack</li>
+            <li>Containerized services with Docker for consistent and isolated deployments</li>
+            <li>Implemented zero-trust networking using Tailscale and Headscale</li>
+            <li>Configured Nginx for TLS termination, routing, and traffic management</li>
+            <li>Deployed Open WebUI and SearXNG for private, self-hosted services</li>
+            <li>Routed services through a Cloudflare-managed domain with automated DDNS</li>
+        </ul>
+        <a href="https://github.com/bricenford" target="_blank" class="project-link">
+            <i class="fab fa-github"></i> Under Construction
+        </a>
+    </div>
+
+    <div class="project-item">
+        <h3 class="project-title">
+            Distributed Job Queue / gRPC Scheduling System | Python
+        </h3>
+        <ul class="project-features">
+            <li>Built a concurrent job scheduling server using unary gRPC and Protocol Buffers</li>
+            <li>Implemented a worker-thread pool with active-job tracking and queue limits</li>
+            <li>Collected server-side metrics including utilization, latency, and queue depth</li>
+            <li>Developed a Python client for job submission and metrics visualization</li>
+            <li>Ensured thread-safe state management with synchronization primitives</li>
+        </ul>
+        <a href="https://github.com/bricenford" target="_blank" class="project-link">
+            <i class="fab fa-github"></i> Under Construction
+        </a>
+    </div>
+
+    <div class="project-item">
+        <h3 class="project-title">Weather Application | C++</h3>
+        <ul class="project-features">
+            <li>Fetched real-time weather data using National Weather Service APIs</li>
+            <li>Converted user-provided locations into geographic coordinates</li>
+            <li>Displayed detailed multi-day forecasts and current conditions</li>
+            <li>Implemented interactive console input for location selection</li>
+        </ul>
+        <a href="https://github.com/bricenford" target="_blank" class="project-link">
+            <i class="fab fa-github"></i> Under Construction
+        </a>
+    </div>
+
+    <div class="project-item">
+        <h3 class="project-title">Data Structures Projects | C++</h3>
+        <ul class="project-features">
+            <li>Sparse matrix operations with efficient storage and arithmetic</li>
+            <li>Chip simulation using dynamic allocation and object management</li>
+            <li>Priority-based job queue considering memory and CPU constraints</li>
+            <li>Multiway tree for hierarchical data management</li>
+            <li>Custom linked list for dynamic memory handling</li>
+        </ul>
+        <a href="https://github.com/BricenFord/CS-2413" target="_blank" class="project-link">
+            <i class="fab fa-github"></i> View on GitHub
+        </a>
+    </div>
+
+    <div class="project-item">
+        <h3 class="project-title">Student Grade Parser | Python</h3>
+        <ul class="project-features">
+            <li>Parsed unstructured student data from text files</li>
+            <li>Ranked students by score and participation metrics</li>
+            <li>Assigned letter grades and generated an HTML report</li>
+            <li>Sorted output by last name, first name, and ID</li>
+        </ul>
+        <a href="https://github.com/BricenFord/student-grade-parser" target="_blank" class="project-link">
+            <i class="fab fa-github"></i> View on GitHub
+        </a>
+    </div>
+
+    <div class="project-item">
+        <h3 class="project-title">Portfolio Website | HTML, CSS, JavaScript</h3>
+        <ul class="project-features">
+            <li>Dynamic content switching without page reloads</li>
+            <li>Custom animations for smooth transitions and interactions</li>
+        </ul>
+        <a href="https://github.com/BricenFord/bricenford.github.io" target="_blank" class="project-link">
+            <i class="fab fa-github"></i> View on GitHub
+        </a>
+    </div>
+</div>
 
     <div id="contact" class="container">
         <h2>Contact</h2>
