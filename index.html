@@ -65,16 +65,34 @@ author: Bricen Ford
 
         <div class="project-item">
             <h3 class="project-title">
-                LLM Inference Benchmarking Framework — Python, Slurm, Inference Engines
+                Distributed LLM Inference — Python, Slurm, Ray, vLLM
             </h3>
             <ul class="project-features">
-                <li>Designed a configuration-driven benchmarking framework to evaluate LLM inference performance across multiple engines including Ollama and Ray Serve.</li>
-                <li>Automated generation of Slurm SBATCH job scripts and client inference workloads using template-based build pipelines.</li>
-                <li>Benchmarked containerized inference engines under varying client concurrency levels to measure throughput, latency, and scaling characteristics.</li>
-                <li>Parameterized experiments via JSON configuration files to control cluster resources (CPU, memory, partition, runtime), model selection, and runtime environment setup.</li>
-                <li>Implemented reproducible experiment workflows including virtual environment provisioning and dependency management.</li>
-                <li>Collected structured benchmark artifacts including scheduler logs, runtime metrics, and per-run performance outputs for comparative analysis.</li>
-                <li>Designed the system to support high-performance cluster environments and large-model serving experimentation.</li>
+                <li>Building a distributed LLM inference workflow for HPC environments using Slurm-managed multi-node allocations.</li>
+                <li>Structuring the system in layered phases: Slurm provisioning, Ray cluster orchestration, vLLM integration, and multi-node model execution.</li>
+                <li>Implementing Ray cluster startup across multiple nodes by launching a head node, attaching worker nodes, and validating cluster registration before execution.</li>
+                <li>Designing workflows to verify distributed scheduling, inter-node communication, and GPU visibility prior to introducing inference workloads.</li>
+                <li>Preparing the runtime environment through automated module loading, Python virtual environment setup, and reproducible job execution inside cluster allocations.</li>
+                <li>Planning integration of vLLM for single-node and multi-node inference, with support for distributed execution strategies such as tensor and pipeline parallelism.</li>
+                <li>Focusing on enabling large-model serving across GPUs on multiple machines while preserving debuggability through staged system validation.</li>
+            </ul>
+            <a href="https://github.com/BricenFord/distributed-llm-inference" target="_blank" class="project-link">
+                <i class="fab fa-github"></i> In Progress
+            </a>
+        </div>
+
+        <div class="project-item">
+            <h3 class="project-title">
+                LLM Inference Benchmarking Framework — Python, Slurm, Ollama
+            </h3>
+            <ul class="project-features">
+                <li>Developed a configuration-driven benchmarking framework to evaluate LLM inference performance across different models, engines, and client concurrency levels.</li>
+                <li>Automated generation of Slurm SBATCH job files and client inference scripts using template-based build pipelines.</li>
+                <li>Benchmarked inference workloads to measure throughput, latency, and scaling behavior under varying client loads.</li>
+                <li>Parameterized experiments through JSON configuration files controlling resource allocation, engine settings, runtime environment setup, and client behavior.</li>
+                <li>Supported reproducible experiment execution with virtual environment provisioning, dependency installation, and engine-specific job generation.</li>
+                <li>Collected structured benchmark outputs including Slurm logs, run artifacts, and performance metrics for comparison and visualization.</li>
+                <li>Designed the framework for flexible benchmarking on Slurm-based clusters and efficient evaluation of large-model serving configurations.</li>
             </ul>
             <a href="https://github.com/BricenFord/llm-inference-bench" target="_blank" class="project-link">
                 <i class="fab fa-github"></i> View on Github
